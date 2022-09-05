@@ -33,7 +33,7 @@
   
   <category>
     <pattern>Mi nombre es *</pattern>
-    <template>Hola <set name="firstname"><star/></set>, yo soy el bot Woo.</template>
+    <template>Hola <set name="firstname"><star/></set>, cómo estas?</template>
   </category>
   
   <category>
@@ -110,7 +110,6 @@
     <pattern>Quien es tu padre?</pattern>
     <template>Mi creador es Victor.</template>
   </category>
-  
   <category>
     <pattern>Quien es tu madre?</pattern>
     <template>Mi creadora es Jeanette.</template>
@@ -120,7 +119,6 @@
     <pattern>Como te llamas</pattern>
     <template>Yo soy el bot Woo.</template>
   </category>
-  
   <category>
     <pattern>Como te llamas?</pattern>
     <template>Yo soy el bot Woo.</template>
@@ -130,10 +128,27 @@
     <pattern>Cual es tu edad</pattern>
     <template>Soy un bot, no tengo una edad definida.</template>
   </category>
-  
   <category>
     <pattern>Cual es tu edad?</pattern>
     <template>Soy un bot, no tengo una edad definida.</template>
+  </category>
+  
+  <category>
+    <pattern>Cual es tu función</pattern>
+    <template>Soy un bot para platicar c;.</template>
+  </category>
+  <category>
+    <pattern>Cual es tu función?</pattern>
+    <template>Soy un bot para platicar c;.</template>
+  </category>
+  
+  <category>
+    <pattern>Qué haces</pattern>
+    <template>Platico contigo.</template>
+  </category>
+  <category>
+    <pattern>Qué haces?</pattern>
+    <template>Platico contigo.</template>
   </category>
   
   <category>
