@@ -5,14 +5,20 @@
     <template>Me parece que no tengo una respuesta para eso.</template>
   </category>
   
-  <category>
+<category>
     <pattern>Hola</pattern>
-    <template>Hola, soy el bot Woo, ¿quieres platicar? Escribe 1 para si, 2 para no</template>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Hola, soy el bot Woo, ¿quieres platicar? Escribe 1 para si, 2 para no
+    </template>
   </category>
   
   <category>
     <pattern>Hola *</pattern>
-    <template>Hola, soy el bot Woo, ¿quieres platicar? Escribe 1 para si, 2 para no</template>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Hola, soy el bot Woo, ¿quieres platicar? Escribe 1 para si, 2 para no
+    </template>
   </category>
   
   <category>
@@ -27,7 +33,20 @@
   
   <category>
     <pattern>Mi nombre es *</pattern>
-    <template>Hola <star index="1"/>, yo soy el bot Woo.</template>
+    <template>Hola <set name="firstname"><star/></set>, yo soy el bot Woo.</template>
+  </category>
+  
+  <category>
+      <pattern>Como me llamo</pattern>
+      <template><get name="firstname"></get></template>
+  </category>
+   <category>
+      <pattern>¿Como me llamo?</pattern>
+      <template><get name="firstname"></get></template>
+  </category>
+   <category>
+      <pattern>Como me llamo?</pattern>
+      <template><get name="firstname"></get></template>
   </category>
   
   <category>
@@ -42,22 +61,59 @@
   
   <category>
     <pattern>Quien eres</pattern>
-    <template>Yo soy el bot Woo.</template>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Yo soy el bot Woo.</template>
   </category>
   
   <category>
     <pattern>Quien eres *</pattern>
-    <template>Yo soy el bot Woo.</template>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Yo soy el bot Woo.</template>
+  </category>
+  
+  <category>
+    <pattern>Cual es tu nombre</pattern>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Yo soy el bot Woo.</template>
+  </category>
+  <category>
+    <pattern>Cual es tu nombre?</pattern>
+    <template>
+        <image>https://cdn-icons-png.flaticon.com/512/4712/4712010.png</image>
+        Yo soy el bot Woo.</template>
   </category>
   
   <category>
     <pattern>Quien te creo</pattern>
-    <template>Un equipo de ingenieros en computación.</template>
+    <template>Mis creadores son Jeny y Victor.</template>
   </category>
   
   <category>
     <pattern>Quien te creo?</pattern>
-    <template>Un equipo de ingenieros en computación.</template>
+    <template>Mis creadores son Jeny y Victor.</template>
+  </category>
+  
+  <category>
+    <pattern>Quien es tu padre</pattern>
+    <template>Mi creador es Victor.</template>
+  </category>
+  
+  <category>
+    <pattern>Quien es tu madre</pattern>
+    <template>Mi creadora es Jeanette.</template>
+  </category>
+  
+  <category>
+    <pattern>Quien es tu padre?</pattern>
+    <template>Mi creador es Victor.</template>
+  </category>
+  
+  <category>
+    <pattern>Quien es tu madre?</pattern>
+    <template>Mi creadora es Jeanette.</template>
   </category>
   
   <category>
@@ -79,5 +135,98 @@
     <pattern>Cual es tu edad?</pattern>
     <template>Soy un bot, no tengo una edad definida.</template>
   </category>
+  
+  <category>
+    <pattern>Gracias</pattern>
+    <template>Denada c;</template>
+  </category>
+  
+  <category>
+    <pattern>Adios</pattern>
+    <template>Adios c;</template>
+  </category>
+  <category>
+    <pattern>Adios *</pattern>
+    <template>Adios c;</template>
+  </category>
+  
+  <category>
+    <pattern>Bye</pattern>
+    <template>Bye c;</template>
+  </category>
+  <category>
+    <pattern>Bye *</pattern>
+    <template>Bye c;</template>
+  </category>
+  
+  
+  <category>
+    <pattern>^ <set>chistes</set> ^</pattern>
+        <template>
+        <random>
+            <li>¿Cuál es el colmo de Aladdín? Tener mal genio.</li>
+            <li>¿Qué le dijo una pulga a otra pulga? Vamos al pulgatorio.</li>
+            <li>¿Cómo se dice pañuelo en japonés? Saka-moko.</li>
+            <li>¿Cómo se dice disparo en árabe? Ahí-va-la-bala.</li>
+            <li>¿Por qué las focas miran siempre hacia arriba? ¡Porque ahí están los focos!</li>
+            <li>¿Cómo se llama el primo de Bruce Lee? Broco Lee.</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Como estas</pattern>
+    <template>
+        Bien y tú?
+        <reply>
+            <text>Bien</text>
+            <postback>CHOOSEBIEN</postback>
+        </reply>
+        <reply>
+            <text>Mal</text>
+            <postback>CHOOSEBAD</postback>
+        </reply>
+        <reply>
+            <text>Ni bien ni mal</text>
+            <postback>CHOOSENBM</postback>
+        </reply>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Como estas?</pattern>
+    <template>
+        Bien y tú?
+        <reply>
+            <text>Bien</text>
+            <postback>CHOOSEBIEN</postback>
+        </reply>
+        <reply>
+            <text>Mal</text>
+            <postback>CHOOSEBAD</postback>
+        </reply>
+        <reply>
+            <text>Ni bien ni mal</text>
+            <postback>CHOOSENBM</postback>
+        </reply>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>CHOOSEBIEN</pattern>
+    <template>Que bueno, me alegro c:</template>
+  </category>
+  
+  <category>
+    <pattern>CHOOSEBAD</pattern>
+    <template>Que mal ;c</template>
+  </category>
+  
+  <category>
+    <pattern>CHOOSENBM</pattern>
+    <template>Bueno, espero algun dia estes mejor!</template>
+  </category>
+  
+  
   
 </aiml>
